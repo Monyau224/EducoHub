@@ -175,24 +175,25 @@
     `_Sent via EducoHub Royale Digital Portal_`;
             
             const encodedMsg = encodeURIComponent(rawMessage);
+try {
+        const waURL = `https://wa.me/${schoolPhone}?text=${encodedMsg}`;
+        const mailtoURL = `mailto:${schoolEmail}?subject=Official Admission Inquiry - ${student}&body=${encodedMsg}`;
 
-            try {
-               const waURL = `https://wa.me/${schoolPhone}?text=${encodedMsg}`;
-                const mailtoURL = `mailto:${schoolEmail}?subject=Official Admission Inquiry - ${student}&body=${encodedMsg}`;
-                
-                setTimeout(() => {
-                    window.location.href = mailtoURL;
-                }, 500);
+        // 1. Open WhatsApp in a new tab
+        window.open(waURL, '_blank');
 
-                if (!form.action.includes("YOUR_ID_HERE")) {
-                    form.submit();
-                }
+        // 2. Delay email trigger slightly so WhatsApp tab isn't blocked by browser policies
+        setTimeout(() => {
+            window.location.href = mailtoURL;
+        }, 1000);
 
-                alert("Application Transmitted! Please check your Email App and WhatsApp to confirm delivery.");
+        if (!form.action.includes("YOUR_ID_HERE")) {
+            form.submit();
+        }
 
-            } catch (e) {
-                alert("A technical error occurred. Please use our hotline.");
-            }
+    } catch (e) {
+        alert("A technical error occurred. Please use our hotline.");
+    }
         }
     </script>
 
