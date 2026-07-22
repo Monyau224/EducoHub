@@ -157,25 +157,27 @@
             const schoolEmail = "admissions@educohub.com"; 
 
             const rawMessage = 
-                `ROYAL ADMISSION REQUEST\n` +
-                `--------------------------\n` +
-                `Guardian: ${parent}\n` +
-                `Guardian Contact: ${parentPhone}\n` +
-                `Student: ${student}\n` +
-                `Gender: ${gender}\n` +
-                `Current School: ${school}\n` +
-                `Emergency Contact: ${emergency}\n` +
-                `Specialty Area: ${reason}\n` +
-                `Aspirations: ${goals}\n` +
-                `--------------------------\n` +
-                `Sent via EducoHub Royale Digital Portal`;
-
+                const rawMessage = 
+    `*ROYAL ADMISSION REQUEST*\n` +
+    `----------------------------------------\n\n` +
+    `*GUARDIAN DETAILS*\n` +
+    `• *Name:* ${parent}\n` +
+    `• *Contact:* ${parentPhone}\n\n` +
+    `*STUDENT DETAILS*\n` +
+    `• *Name:* ${student}\n` +
+    `• *Gender:* ${gender}\n` +
+    `• *Current School:* ${school}\n` +
+    `• *Emergency Contact:* ${emergency}\n\n` +
+    `*ACADEMIC PROFILE*\n` +
+    `• *Specialty Area:* ${reason}\n` +
+    `• *Aspirations:* ${goals}\n\n` +
+    `----------------------------------------\n` +
+    `_Sent via EducoHub Royale Digital Portal_`;
+            
             const encodedMsg = encodeURIComponent(rawMessage);
 
             try {
-                const waURL = `https://wa.me/${schoolPhone}?text=${encodeURIComponent('*' + rawMessage.replace(/\n/g, '*%0A*'))}`;
-                window.open(waURL, '_blank');
-
+               const waURL = `https://wa.me/${schoolPhone}?text=${encodedMsg}`;
                 const mailtoURL = `mailto:${schoolEmail}?subject=Official Admission Inquiry - ${student}&body=${encodedMsg}`;
                 
                 setTimeout(() => {
