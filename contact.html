@@ -172,9 +172,7 @@
 
             const encodedMsg = encodeURIComponent(rawMessage);
 
-            try {
-                const waURL = `https://wa.me/${schoolPhone}?text=${encodeURIComponent('*' + rawMessage.replace(/\n/g, '*%0A*'))}`;
-                window.open(waURL, '_blank');
+            try {const waURL = `https://wa.me/${schoolPhone}?text=${encodeURIComponent(rawMessage)}`;
 
                 const mailtoURL = `mailto:${schoolEmail}?subject=Official Admission Inquiry - ${student}&body=${encodedMsg}`;
                 
