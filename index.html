@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducoHub | Excellence</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* --- GLOBAL BACKGROUND ENGINE --- */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            /* Applying the background to the entire body */
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('S.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* Keeping your header logic but ensuring it is transparent to show the body background */
+        header {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: transparent !important;
+        }
+
+        /* --- MODERN IMAGE-BACKGROUND BUTTON (Unchanged) --- */
+        .modern-pic-button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 350px; 
+            height: 100px; 
+            text-decoration: none;
+            color: white;
+            font-weight: 900;
+            letter-spacing: 2px;
+            overflow: hidden;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .modern-pic-button .btn-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('P.jpeg') center center;
+            background-size: cover;
+            z-index: 1;
+            transition: 0.5s;
+        }
+
+        .modern-pic-button .btn-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); 
+            z-index: 2;
+            transition: 0.3s;
+        }
+
+        .modern-pic-button span {
+            position: relative;
+            z-index: 3;
+            text-transform: uppercase;
+        }
+
+        .modern-pic-button:hover {
+            transform: scale(1.05);
+            border-color: #D32F2F; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .modern-pic-button:hover .btn-bg {
+            transform: scale(1.2);
+        }
+
+        .modern-pic-button:hover .btn-overlay {
+            background: rgba(211, 47, 47, 0.4); 
+        }
+
+        nav {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo-area">
+            <img src="R.jpeg" class="school-logo" style="height: 100px;"> 
+            <div class="logo-text" style="display: inline-block; font-weight: bold; font-size: 1.5rem; margin-left: 10px;">
+                EDUCO<span style="color:#D32F2F">HUB</span>
+            </div>
+        </div>
+        <ul style="display: flex; list-style: none; gap: 25px;">
+            <li><a href="index.html" style="color: rgb(240, 15, 15); text-decoration: none;">Home</a></li>
+            <li><a href="team.html" style="color: rgb(218, 27, 27); text-decoration: none;">Leadership</a></li>
+            <li><a href="campus.html" style="color: rgb(218, 20, 20); text-decoration: none;">Campus</a></li>
+            <li><a href="contact.html" style="color: rgb(232, 16, 16); text-decoration: none;">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header> <img src="R.jpeg" class="school-logo" style="height: 100px;">
+        <h1 style="font-size: 5rem; font-family: 'Playfair Display'; margin: 0;" >Redefining Education</h1>
+        <p style="margin: 20px 0 50px; font-size: 1.4rem; max-width: 700px; font-weight: 300;" >
+            The most prestigious private learning community in Lesotho.
+        </p>
+        
+        <a href="contact.html" class="modern-pic-button">
+            <div class="btn-bg"></div>
+            <div class="btn-overlay"></div>
+            <span>Book a Private Tour</span>
+        </a>
+    </header>
+
+    <footer style="text-align: center; padding: 40px; color: rgba(230, 9, 57, 0.893);">
+        &copy; 2026 EducoHub Secondary School | Maputsoe, Lesotho
+    </footer>
+
+</body>
+</html>

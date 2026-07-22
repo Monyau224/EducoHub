@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | EducoHub Royale</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght=900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="particle" style="left: 5%; width: 10px; height: 10px; animation-duration: 18s;"></div>
+    <div class="particle" style="left: 25%; width: 5px; height: 5px; animation-duration: 12s; animation-delay: 2s;"></div>
+    <div class="particle" style="left: 55%; width: 8px; height: 8px; animation-duration: 20s; animation-delay: 5s;"></div>
+    <div class="particle" style="left: 85%; width: 12px; height: 12px; animation-duration: 15s;"></div>
+
+    <nav class="nav-royale">
+        <div class="logo-wrap">
+            <img src="R.jpeg" alt="EducoHub Logo">
+            <h1>EDUCO<span>HUB</span></h1>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="campus.html">Campus Life</a></li>
+            <li><a href="contact.html" style="color: #D32F2F;">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section class="main-layout-section">
+        
+        <div>
+            <h1 class="hero-heading">
+                THE GATEWAY <br> TO <span>EXCELLENCE</span>
+            </h1>
+            <p class="hero-description">
+                Direct your formal inquiries to the Chancellery. We strictly select only the most ambitious minds for our 2026 intake.
+            </p>
+            
+            <div class="info-cards-container">
+                <div class="info-card">
+                    <p class="royal-label">Chancellery Hotline</p>
+                    <h3>+266 5688 4140</h3>
+                </div>
+                
+                <div class="info-card">
+                    <div class="lesotho-flag-strip">
+                        <div class="flag-blue"></div>
+                        <div class="flag-white"></div>
+                        <div class="flag-green"></div>
+                    </div>
+                    <p class="royal-label">Campus Location</p>
+                    <p class="location-text">
+                        Maputsoe, Leribe <br>
+                        <span class="sub-location">Behind FNB Maputsoe</span>
+                    </p>
+                    <a href="https://www.google.com/maps/search/FNB+Maputsoe" target="_blank" class="maps-link">
+                        OPEN GOOGLE MAPS <i class="fa-solid fa-location-dot"></i>
+                    </a>
+                </div>
+
+                <p class="royal-label" style="margin-top: 10px;">Direct Connectivity</p>
+                <div class="social-grid">
+                    <a href="https://wa.me/26656884140" target="_blank" class="social-log" style="border-color: #25D366;" onmouseover="this.style.background='#25D366'" onmouseout="this.style.background='transparent'">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://facebook.com/Educo hub High- School of Science and Technology" target="_blank" class="social-log" style="border-color: #1877F2;" onmouseover="this.style.background='#1877F2'" onmouseout="this.style.background='transparent'">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="mailto:admissions@educohub.com" class="social-log" style="border-color: #D32F2F;" onmouseover="this.style.background='#D32F2F'" onmouseout="this.style.background='transparent'">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="secure-box">
+            <h2>SECURE YOUR SPACE</h2>
+            <p class="form-subtitle">Official Enrollment Inquiry</p>
+            
+            <form id="applicationForm" action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
+                <div class="input-group">
+                    <label class="royal-label">Full Name of Guardian</label>
+                    <input type="text" id="parentName" name="parent_name" required>
+                </div>
+
+                <div class="input-group">
+                    <label class="royal-label"></label>
+                    <input type="tel" id="parentPhone" name="parent_phone" required placeholder="e.g. +266...">
+                </div>
+
+                <div class="input-group">
+                    <label class="royal-label"></label>
+                    <input type="text" id="studentDetail" name="student_info" required placeholder="Full Name, Age">
+                </div>
+
+                <div class="input-group">
+                    <label class="royal-label"></label>
+                    <select id="studentGender" name="student_gender" style="background: #000; color: white;">
+                        <option>Male</option>
+                        <option>Female</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label class="royal-label">Current Institution & Grade</label>
+                    <input type="text" id="currentSchool" name="current_school" required>
+                </div>
+
+                <div class="input-group">
+                    <label class="royal-label">Emergency Contact Number</label>
+                    <input type="tel" id="emergencyPhone" name="emergency_phone" required>
+                </div>
+
+                <div class="input-group">
+                    <label class="royal-label"></label>
+                    <select id="reason" name="reason_for_choice" style="background: #000; color: white;">
+                        <option>Academic Prestige</option>
+                        <option>Innovation & Software Development</option>
+                        <option>Executive Leadership</option>
+                        <option>Sports & Athletic Excellence</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label class="royal-label"></label>
+                    <textarea id="aspirations" name="aspirations" rows="3" required placeholder="Describe your future goals..."></textarea>
+                </div>
+
+                <button type="button" onclick="handleRoyaleSubmission()" class="submit-btn">
+                    Transmit to Chancellery
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function handleRoyaleSubmission() {
+            const parent = document.getElementById('parentName').value;
+            const parentPhone = document.getElementById('parentPhone').value;
+            const student = document.getElementById('studentDetail').value;
+            const gender = document.getElementById('studentGender').value;
+            const school = document.getElementById('currentSchool').value;
+            const emergency = document.getElementById('emergencyPhone').value;
+            const reason = document.getElementById('reason').value;
+            const goals = document.getElementById('aspirations').value;
+            const form = document.getElementById('applicationForm');
+
+            if (!parent || !parentPhone || !student || !school || !emergency || !goals) {
+                alert("ROYAL NOTICE: All essential student fields must be completed to be considered for admission.");
+                return;
+            }
+
+            const schoolPhone = "266568841"; 
+            const schoolEmail = "admissions@educohub.com"; 
+
+            const rawMessage = 
+                `ROYAL ADMISSION REQUEST\n` +
+                `--------------------------\n` +
+                `Guardian: ${parent}\n` +
+                `Guardian Contact: ${parentPhone}\n` +
+                `Student: ${student}\n` +
+                `Gender: ${gender}\n` +
+                `Current School: ${school}\n` +
+                `Emergency Contact: ${emergency}\n` +
+                `Specialty Area: ${reason}\n` +
+                `Aspirations: ${goals}\n` +
+                `--------------------------\n` +
+                `Sent via EducoHub Royale Digital Portal`;
+
+            const encodedMsg = encodeURIComponent(rawMessage);
+
+            try {
+                const waURL = `https://wa.me/${schoolPhone}?text=${encodeURIComponent('*' + rawMessage.replace(/\n/g, '*%0A*'))}`;
+                window.open(waURL, '_blank');
+
+                const mailtoURL = `mailto:${schoolEmail}?subject=Official Admission Inquiry - ${student}&body=${encodedMsg}`;
+                
+                setTimeout(() => {
+                    window.location.href = mailtoURL;
+                }, 500);
+
+                if (!form.action.includes("YOUR_ID_HERE")) {
+                    form.submit();
+                }
+
+                alert("Application Transmitted! Please check your Email App and WhatsApp to confirm delivery.");
+
+            } catch (e) {
+                alert("A technical error occurred. Please use our hotline.");
+            }
+        }
+    </script>
+
+</body>
+</html>
